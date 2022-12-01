@@ -1,0 +1,9 @@
+version: '3'
+services:
+  db:
+    container_name: municipes_app_pg
+    image: postgres:13.2
+    environment:
+      POSTGRES_PASSWORD: password
+    ports:
+      [5432:5432]
