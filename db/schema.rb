@@ -15,12 +15,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_02_195036) do
   enable_extension "plpgsql"
 
   create_table "citizens", force: :cascade do |t|
-    t.string "full_name"
-    t.string "CPF"
-    t.string "CNS"
-    t.string "email"
-    t.date "birth_date"
-    t.string "phone"
+    t.string "full_name", null: false
+    t.string "CPF", null: false
+    t.string "CNS", null: false
+    t.string "email", null: false
+    t.date "birth_date", null: false
+    t.string "phone", null: false
     t.bigint "town_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_02_195036) do
   end
 
   create_table "towns", force: :cascade do |t|
-    t.boolean "status"
+    t.boolean "status", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
