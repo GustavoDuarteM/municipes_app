@@ -2,6 +2,6 @@
 
 FactoryBot.define do
   factory :town do
-    status { false }
+    status { true }
   end
 end
