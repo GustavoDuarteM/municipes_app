@@ -1,3 +1,3 @@
 class Address < ApplicationRecord
-  belongs_to :town
+  belongs_to :citizen
 end

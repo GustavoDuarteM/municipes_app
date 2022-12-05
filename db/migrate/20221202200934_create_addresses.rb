@@ -8,7 +8,7 @@ class CreateAddresses < ActiveRecord::Migration[7.0]
       t.string :city, null: false
       t.string :UF, null: false
       t.string :IBGE
-      t.references :town, null: false, foreign_key: true
+      t.references :citizen, null: false, foreign_key: true
 
       t.timestamps
     end

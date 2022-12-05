@@ -7,6 +7,6 @@ FactoryBot.define do
     city { "MyString" }
     UF { "MyString" }
     IBGE { "MyString" }
-    town { nil }
+    citizen { nil }
   end
 end

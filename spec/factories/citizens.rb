@@ -8,6 +8,6 @@ FactoryBot.define do
     email { 'yasmin-dacruz85@texfuse.com.br' }
     birth_date { '2004-07-26' }
     phone { '11994886217' }
-    town { nil }
+    status { true }
   end
 end

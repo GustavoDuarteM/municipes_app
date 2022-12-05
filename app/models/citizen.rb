@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class Citizen < ApplicationRecord
-  belongs_to :town
+  has_many :addresses
+
   validates :email, email: true
   validate :validate_birth_date, :validate_cpf, :validate_cns
 

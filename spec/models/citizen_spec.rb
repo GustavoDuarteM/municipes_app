@@ -4,8 +4,7 @@ require 'rails_helper'
 
 RSpec.describe Citizen, type: :model do
   describe 'citizen creation' do
-    let(:town) { build(:town) }
-    let(:citizen) { build(:citizen, town: town) }
+    let(:citizen) { build(:citizen) }
 
     context 'when the citizen has a valid data' do
       it 'valid' do
