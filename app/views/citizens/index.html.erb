@@ -1,0 +1,43 @@
+<div class="container">
+<h1>Munícipes</h1>
+<hr>
+</div>
+
+
+<% @citizens.each do |citizen|  %>
+<div class="container p-2">
+  <div class="card">
+    <div class="card-body">
+      <div class="d-flex flex-row">
+        <h5 class="card-title">
+          <%= citizen.full_name %>
+        </h5>
+        <div class='px-2'>
+          <% if citizen.status  %>
+            <span class="badge rounded-pill bg-success"> Ativo</span>
+          <% else %>
+            <span class="badge rounded-pill bg-secondary"> Desativado</span>
+          <%end  %>
+        </div>
+      </div>
+      <h6 class="card-subtitle">
+        <span class="mb-2 text-muted"> <%= citizen.email %> </span>
+      </h6>
+      <p class="card-text">
+        Telefone: <%= citizen.phone %> <br>
+        CPF: <%= citizen.CPF %> <br>
+        CNS: <%= citizen.CNS %> <br>
+        Nascimento: <%= citizen.birth_date.strftime('%d/%m/%Y') %>
+      </p>
+      <p class="card-text"></p>
+    </div>
+  </div>
+</div>
+<% end  %>
+
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <%= link_to_prev_page @citizens, 'Prev Page', class: 'btn btn-primary m-2' %>
+    <%= link_to_next_page @citizens, 'Next Page', class: 'btn btn-primary m-2' %>
+  </div>
+</div>
